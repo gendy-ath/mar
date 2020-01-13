@@ -1,0 +1,647 @@
+/*Nano Bar Carousel*/
+.carousel-nanoBar{
+    background: blue;
+    height:8px;
+}
+.ak-video-loop {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+/*Mobile Menu Icons*/
+.burger-icon-close {
+    width: 30px;
+}
+.burger-icon {
+    position: absolute;
+    width: 30px;
+}
+.desktop-logo {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    width: 650px;
+    margin: 0 auto !important;
+    top: 50%;
+    max-width: 737px;
+
+}
+.mobile-logo {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    margin: 0 auto !important;
+    top: 50%;
+    max-width: 214px;
+
+}
+/*Radio Style*/
+.radio-text{
+    vertical-align: middle;
+    
+}
+#player{
+    display:none;
+}
+figure{
+    display:none;
+}
+button.stream-button {
+border: none;
+padding:0 !important;
+background:transparent;
+}
+.b-bottom{
+    border-bottom:1px solid black;
+}
+.b-top{
+    border-top:1px solid black;
+}
+.no-pad{
+    padding-left: 0 !important;
+    padding-right:0 !important;
+}
+.white-bg{
+    background-color:white;
+}
+p{
+    margin-bottom:1em;
+}
+.highlight{
+    font-family: 'HelveticaNeueBold';
+    font-size: 2em;
+    word-break: break-word;
+    line-height: 0.6em;
+}
+.footer-logo{
+    margin-top:500px;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('../fonts/HelveticaNeue.woff2') format('woff2'),
+         url('../fonts/HelveticaNeue.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('../fonts/HelveticaNeueLt.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('../fonts/Helvetica Neu Bold.woff2') format('woff2'),
+         url('../fonts/HelveticaNeueBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body{
+    font-family: 'HelveticaNeueLight';
+    position:relative;
+  }
+  .bg-image{
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  /*BAR STREAM*/
+ .bar-radio-info{
+    font-family: 'HelveticaNeue';
+    text-align: center;
+    
+   
+    overflow: hidden;
+    font-size:1.25em;
+ }
+
+
+ .bar-controls{
+     z-index:1030;
+     margin-left: 0px;
+ }
+ .play-icon, .stop-icon {
+    width: 35px;
+}
+.play-icon{
+    position:absolute;
+}
+ #live-button {
+    font-size: 1.25em;
+    z-index: 1030;
+    font-family: 'HelveticaNeueBold';
+    letter-spacing: -1px;
+}
+.info{
+    font-size: 1.25em; 
+    z-index: 1030; 
+    font-family: 'HelveticaNeueBold';
+    letter-spacing: -1px;
+  
+}
+.info a{
+    color:black;
+}
+
+/*NAVIGATION*/
+.navbar-nav li a {
+    font-size: 1.25em;
+    color: black;
+}
+.nav-link{
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+    transition: all 1s ease-out;
+}
+.nav-item:hover{
+    opacity:0.7;
+}
+#menu-bar-component{
+    transition: all .5s ease-out;
+    z-index: 1010;
+}
+#stream-bar-component{
+    z-index: 1020;
+    background:white;
+
+
+}
+/*
+.dropdown-inhalt {
+    position: absolute;
+    top: 100px;
+    border-top: 1px solid black;
+   
+    width: 100vw;
+}
+*/
+.dropdown-inhalt {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+  
+}
+.genres-link {
+ padding: .5rem 1rem;
+ font-size: 1.25em;
+ color:black;
+ display: block;
+}
+.genres-style {
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+padding: .5rem 1rem;
+}
+.genres-style:hover {
+    background-color:black;
+  
+}
+.genres-style:hover a{
+   
+    color:white;
+}
+.artists-link {
+font-size: 3rem;
+color:  black;
+display: block;
+font-family: 'HelveticaNeueLight';
+}
+.artists-style {
+border-bottom: 1px solid  black;
+padding: 1em;
+}
+.header-menu {
+    font-size: 2.2rem;
+display: inline-block;
+font-family: 'HelveticaNeueBold';
+margin-left: 5px;   
+    
+}
+.stroke-font {
+    font-size: 5vw;
+    
+    text-transform: uppercase;
+    font-family: 'HelveticaNeueBold';
+    -webkit-text-stroke-color: black;
+    -webkit-text-fill-color: white;
+    color: #fff !important;
+    text-stroke-color: #000000 !important;
+    -webkit-text-stroke-color:#000 !important;
+    -webkit-text-stroke: 2px#000;
+    letter-spacing: -5px;
+}
+.stroke-font:hover{
+    color: #000 !important;
+    -webkit-text-fill-color: black;
+}
+
+.stroke-font-2{
+    font-size: 5vw;
+
+text-transform: uppercase;
+
+font-family: 'HelveticaNeueBold';
+
+-webkit-text-stroke-color: black;
+
+-webkit-text-fill-color:
+black;
+
+color:
+#000 !important;
+
+text-stroke-color: #000000 !important;
+
+-webkit-text-stroke-color:
+#fffefe !important;
+
+-webkit-text-stroke: 2px
+#fff;
+
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+letter-spacing: -18px;
+}
+
+.module-dark{
+    background:black;
+color:white;
+}
+
+.sub-header{
+    font-size:2rem;
+    margin-left:15px;
+    display: inline-block;
+    font-family: 'HelveticaNeueLight';
+}
+/*
+.offset-header-menu{
+    top:60px !important;
+}
+*/
+
+/*Manifesto Collapse*/
+.manifesto {
+ height: 100vh;
+ overflow-y: auto;
+ 
+   }
+   .manifesto-text{
+    font-size: 3rem;
+    line-height: 1em;
+    text-align: left;
+    
+    margin-top: 2%;
+    font-family: 'HelveticaNeueLight';
+   }
+   .body-svg{
+       overflow:hidden; 
+   }
+   #svgCloud {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    animation: move 30s linear infinite;
+    margin-left: 50vw;
+    margin-top: 15vh;
+    transform: translateX(-50%) translateY(-50%);
+    display:none;
+  }
+  
+  @keyframes move {
+    50% {
+      transform: translateX(50vw) translateY(-50%);
+    }
+    50.001% {
+      transform: translateX(-50vw) translateY(-50%);
+    }
+  }
+
+  .container-anime{
+    overflow:hidden; 
+    width:100vw;
+    font-size: 2rem;
+
+font-family: 'HelveticaNeueLight';
+  }
+  #anime-id{
+    position: relative;
+
+    height: auto;
+    
+    width: 100px;
+    
+    animation: yolo 30s linear infinite;
+    
+    margin-left: 50vw;
+    
+    margin-top: 15px;
+    
+    transform: translateX(50%) translateY(-50%);
+    
+    z-index: 999999;
+    
+    white-space: nowrap;
+  }
+  @keyframes yolo {
+    50% {
+      transform: translateX(-50vw) translateY(-50%);
+    }
+    50.001% {
+      transform: translateX(50vw) translateY(-50%);
+    }
+  }
+
+
+  /*Javascript classes*/
+  .active-link{
+     margin-left:15px;
+     font-family: 'HelveticaNeueBold';
+    
+  }
+  .active-link a{
+      color:blue !important;
+  }
+
+
+  .fa.fa-caret-right {
+    margin-right: 10px;
+}
+
+/*SCHEDULE STYLE*/
+.schedule-link {
+color: black;
+/*padding: 0.5em;*/
+}
+.schedule-link:hover{
+    cursor:s-resize;
+    color:black;
+ 
+}
+.schedule-link:hover .header-schedule{
+    margin-left:15px;
+ 
+} 
+.list-group.list-group-flush li{
+    font-size: 1.25em;
+    color:black;
+}
+a.schedule-list-link:hover  {
+    background-color:black!important;
+}
+
+.header-schedule{
+    font-family: 'HelveticaNeueLight';
+    font-size: 15rem;
+    letter-spacing: -5px;
+    display: inline-block;
+    transition: all 1s ease-out;
+    text-transform: uppercase;
+}
+
+.date-schedule{
+    font-size: 6rem;
+    font-family: 'HelveticaNeueLight';
+}
+  
+/*ANIMATIONS*/
+.fade-in-bottom {
+	-webkit-animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-bottom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+/* ----------------------------------------------
+ * Generated by Animista on 2020-1-10 13:31:13
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation fade-in-bottom
+ * ----------------------------------------
+ */
+ @-webkit-keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fade-in-bottom {
+    0% {
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .pulsate-css {
+    animation: pulsate 1s ease-out;
+
+    animation-iteration-count: 1;
+
+animation-iteration-count: infinite;
+
+opacity: 0.0;
+
+border: 10px solid red;
+border-radius: 30px;
+height: 18px;
+width: 18px;
+position: relative;
+display: inline-block;
+text-align: center;
+vertical-align: middle;
+margin-left:15px;
+}
+  
+/* Make the element pulse (grow large and small slowly) */
+/* Usage
+    .myElement {
+        animation: pulsate 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1; 
+    }
+*/
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/* Make the element's opacity pulse*/
+/* Usage
+    .myElement {
+        animation: opacityPulse 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 0; 
+    }
+*/
+@-webkit-keyframes opacityPulse {
+    0% {opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {opacity: 0.0;}
+}
+
+/* Make the element's background pulse. I call this alertPulse because it is red. You can call it something more generic. */
+/* Usage
+    .myElement {
+        animation: alertPulse 1s ease-out;
+        animation-iteration-count: infinite;
+        opacity: 1; 
+    }
+*/
+@-webkit-keyframes alertPulse {
+    0% {background-color: #9A2727; opacity: 1;}
+    50% {opacity: red; opacity: 0.75; }
+    100% {opacity: #9A2727; opacity: 1;}
+}
+
+
+/* Make the element rotate infinitely. */
+/* 
+Usage
+    .myElement {
+        animation: rotating 3s linear infinite;
+    }
+*/
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/*CAROUSEL*/
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .detach-hero {
+
+    font-family: 'HelveticaNeueLight';
+    position: absolute;
+    
+    left: 20px;
+    right: 20px;
+    font-size: 5rem;
+    color: 
+
+    white;
+    line-height: 101%;
+
+}
+.hero-category{
+margin-bottom: 30px;
+}
+.hero-title{
+    margin-bottom: 30px;
+    }
+.carousel-indicators{
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+}
+.carousel-indicators li{
+    width:100%;
+    height:8px;
+}
+/*MOBILE BREAKPOINTS*/
+@media (max-width: 576px) {
+    .radio-text{
+        display: none;
+    }
+    }
+
+@media (max-width: 992px) { 
+    .detach-hero{
+        font-size:3rem;
+    }
+    .pulsate-css{
+        margin-left:-1px;
+        border: 2px solid red;
+    }
+    #live-button {
+        margin-left:-5px;
+    }
+ .nav-item {
+ border-bottom: 1px solid black;
+  padding: 0.5em 1em;
+ 
+ }
+ .mobile-pad{
+     padding-top:0 !important;
+     padding-bottom: 0px !important;
+     padding-left: 0 !important;
+     padding-right: 0 !important;
+ }
+ /*
+ .offset-header-menu{
+     top:240px !important;
+ }
+ .dropdown-inhalt{
+     top:240px;
+ }
+ */
+ .header-menu {
+     font-size: 4em;
+     
+ }
+ .navbar-nav li a {
+     font-size: 0.85em;
+   
+ }
+ .artists-link{
+     font-size: 2em;
+ }
+ .header-schedule{
+     font-size: 1.75em !important;
+     letter-spacing: -1px !important;
+    
+ }
+ .date-schedule{
+     font-size:1.25em !important;
+     
+     
+ }
+ .list-group.list-group-flush li{
+     font-size: 1em;
+    
+ }
+ .list-group-item{
+     padding: .25rem 0.25rem !important;
+ }
+}

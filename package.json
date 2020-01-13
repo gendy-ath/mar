@@ -1,0 +1,12 @@
+{
+  "name": "mar-site",
+  "version": "0.0.1",
+  "description": "radio site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "./node_modules/.bin/lr-http-server "
+  },
+  "author": "gendy",
+  "license": "ISC"
+}
