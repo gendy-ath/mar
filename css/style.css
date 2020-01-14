@@ -1,12 +1,56 @@
+img{
+    width: 100%;
+}
+a:hover {
+color: blue;
+    text-decoration: none !important;
+}
+.overflow-none{
+    overflow: hidden !important;
+}
 /*Nano Bar Carousel*/
 .carousel-nanoBar{
     background: blue;
     height:8px;
+    z-index:1020 !important;
 }
 .ak-video-loop {
     position: relative;
     width: 100%;
     height: 100%;
+}
+.nanoBar-hide{
+    height:0;
+}
+/*Search bar*/
+.form-control-inhalt {
+background: transparent;
+
+border-bottom: 1px solid black;
+border-top: none;
+border-left: none;
+border-right: none;
+padding: 0px;
+font-size: 3rem;
+font-family: "HelveticaNeueLight";
+color: black;
+width: 100%;
+text-align: center;
+margin-bottom: 15px;
+
+}
+.search-button {
+ position: absolute;
+ right: 15px;
+
+}
+.search-button img{
+    width:40px;
+}
+#searchCollapse img {
+
+    width: 30px;
+
 }
 /*Mobile Menu Icons*/
 .burger-icon-close {
@@ -41,6 +85,10 @@
 .radio-text{
     vertical-align: middle;
     
+}
+button:focus {
+    
+    outline: none !important;
 }
 #player{
     display:none;
@@ -112,6 +160,30 @@ p{
     -o-background-size: cover;
     background-size: cover;
   }
+  .category-bg-image{
+    height: 50vh;
+    min-height: 350px;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background:center;
+    background-attachment: scroll;
+  }
+
+  .index-bg-image{
+    height: 50vh;
+    
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background:center;
+    background-attachment: scroll;
+    
+}
 
   /*BAR STREAM*/
  .bar-radio-info{
@@ -165,7 +237,7 @@ p{
     opacity:0.7;
 }
 #menu-bar-component{
-    transition: all .5s ease-out;
+    transition: all .2s ease-out;
     z-index: 1010;
 }
 #stream-bar-component{
@@ -173,6 +245,15 @@ p{
     background:white;
 
 
+}
+.info-text {
+    font-size: 3rem;
+    text-align: left;
+    padding:1rem;
+    line-height: 100%;
+}
+.social-style{
+    padding:1rem;
 }
 /*
 .dropdown-inhalt {
@@ -213,6 +294,11 @@ font-size: 3rem;
 color:  black;
 display: block;
 font-family: 'HelveticaNeueLight';
+}
+.social-link{
+    font-size: 3rem;
+    padding:1rem;
+    color:  black;
 }
 .artists-style {
 border-bottom: 1px solid  black;
@@ -370,6 +456,9 @@ font-family: 'HelveticaNeueLight';
   .active-link a{
       color:blue !important;
   }
+  .active-info{
+      border-bottom: 2px solid blue;
+  }
 
 
   .fa.fa-caret-right {
@@ -400,16 +489,17 @@ a.schedule-list-link:hover  {
 
 .header-schedule{
     font-family: 'HelveticaNeueLight';
-    font-size: 15rem;
-    letter-spacing: -5px;
+    font-size: 6rem;
+  
     display: inline-block;
     transition: all 1s ease-out;
-    text-transform: uppercase;
+   
 }
 
 .date-schedule{
-    font-size: 6rem;
+    font-size: 3rem;
     font-family: 'HelveticaNeueLight';
+    margin-left:15px;
 }
   
 /*ANIMATIONS*/
@@ -579,10 +669,105 @@ margin-bottom: 30px;
     width:100%;
     height:8px;
 }
+
+/****************************POST PAGE******************************/
+.post-asrtist-name {
+    font-size: 3rem;
+    font-family: "HelveticaNeueBold";
+    text-transform: uppercase;
+    display:inline-block;
+    margin-right:15px;
+
+
+}
+.post-title{
+    font-size: 3rem;
+    display:inline-block;
+}
+.post-description {
+    font-size: 3rem;
+    line-height: 100%;
+}
+.post-description-sample {
+    font-size: 3rem;
+    line-height: 100%;
+    height:200px;
+    overflow: hidden;
+}
+.date-info{
+   
+    display: inline-block;
+    margin-right:15px;
+    
+}
+.metadata-header{
+   
+    font-family: "HelveticaNeueBold";
+}
+.post-genre{
+    display: inline-block;
+}
+.genre-link {
+   
+    margin-right: 15px;
+    color:  white;
+    padding: 0.25rem;
+    border-bottom: 1px solid white;
+}
+.meta-data-dontainer {
+     border-top: 1px solid #848484;
+    padding: 0.6rem 0rem;
+    font-size:1rem;
+   
+}
+.js-post-header{
+    transition: all .5s ease-out;
+}
+.post-bg-image{
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-post-module{
+    /*padding:15rem;*/
+    
+}
+.artist-name-list {
+    text-transform: uppercase;
+    margin-right: 30px;
+
+}
+.track-name-list {
+    font-style: italic;
+}
+.mobile-offset{
+    top:51.55px;
+}
 /*MOBILE BREAKPOINTS*/
 @media (max-width: 576px) {
     .radio-text{
         display: none;
+    }
+    .post-asrtist-name{
+        font-size: 1.25rem;
+    }
+    .post-title{
+        font-size:1.25rem;
+    }
+    .header-menu{
+        font-size:1.75rem !important;
+    }
+    .sub-header{
+        font-size:1.25rem;
+        margin-left:0;
+    }
+    .mobile-logo{
+        max-width: 100px;
     }
     }
 
@@ -608,6 +793,7 @@ margin-bottom: 30px;
      padding-left: 0 !important;
      padding-right: 0 !important;
  }
+
  /*
  .offset-header-menu{
      top:240px !important;
@@ -645,3 +831,22 @@ margin-bottom: 30px;
      padding: .25rem 0.25rem !important;
  }
 }
+
+/******************MIXCLOUD STYLE*******************/
+.dark .widget-header, .dark .widget-tracklist-container, .dark .widget-tracklist-row {
+background-color: #000 !IMPORTANT;
+}
+.micxloud-container {
+ height: 60px;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+  
+    > .col,
+    > [class*="col-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }

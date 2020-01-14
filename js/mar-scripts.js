@@ -24,65 +24,147 @@ if (matchMedia) {
   }
 */
 
-/**Scroll hide navbar 
+
+$(window).scroll(function(){
+  if($(document).scrollTop() > 300) {
+      $('.post-asrtist-name').css('font-size', '2rem');
+      $('.post-title').css('font-size', '2rem');
+  } else {
+      $('.post-asrtist-name').css('font-size', '3rem');
+      $('.post-title').css('font-size', '3rem');
+  }
+});
+
+
+
+
 var prevScrollpos = window.pageYOffset;
 $(window).scroll(function(){
+  if (window.matchMedia("(min-width: 992px)").matches) {
+  var headerMainJs = $('#stream-bar-component').height();
+  var navOffsetGeneralScroll = $('#general-header').height();
+
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
+    $('.carousel-nanoBar').css('top',navOffsetGeneralScroll);
+    $('.js-post-header').css('top', '0px');
     $('#menu-bar-component').css('margin-top', '0px');
+    $('.sticky-top-offset').css('top',navOffsetGeneralScroll);
+    $('.general-top').css('top',navOffsetGeneralScroll);
+    
+   
   } else {
+    $('.carousel-nanoBar').css('top',headerMainJs +17);
+    $('.js-post-header').css('top', -headerMainJs);
     $('#menu-bar-component').css('margin-top', '-50px');
+    $('.sticky-top-offset').css('top',navOffsetGeneralScroll);
+    $('.general-top').css('top',navOffsetGeneralScroll);
+    
+    
   }
+}
+if (window.matchMedia("(max-width: 991px)").matches) {
+  $('.sticky-top-offset').addClass('mobile-offset');
+}
+  
   prevScrollpos = currentScrollPos;
 });
-*/
+
+
 
 
 
 $(document).ready(function(){
-   
+
+  var navOffsetGeneral = $('#general-header').height();
+  
+  
+  /*
+  $('.carousel-nanoBar').css('top',navOffsetGeneral);
+  */
+  $('.post-page').css('margin-top',navOffsetGeneral);
+  $('.category-page').css('margin-top',navOffsetGeneral);
+ 
+  $('.detach-hero').css('top',navOffsetGeneral * 2);
+
+  });
+
+
+  
+
+$(window).scroll(function() {
+  var carouselHeight = $('#carouselRadio').height();
+  var headerNav = $('#general-header').height();
+  var height = $(window).scrollTop();
+  if (height > carouselHeight - headerNav ) {
+       $(".carousel-nanoBar").addClass("nanoBar-hide");
+  } else {
+     $('.carousel-nanoBar').removeClass('nanoBar-hide');
+  }
+
+
+});
+
+
+$(document).ready(function(){
+ 
+    
+  $("#collapseInfo").on('shown.bs.collapse', function(){
+    $('#infoLink').addClass('active-info')
+  });
+  $("#collapseInfo").on('hidden.bs.collapse', function(){
+    $('#infoLink').removeClass('active-info')
+  });
    
   $("#collapseShows").on('shown.bs.collapse', function(){
     $('#showsLink').addClass('active-link')
     $('#showsLink i').removeClass('fa-rotate-90')
+    $('body').addClass('overflow-none')
     
   });
 
   $("#collapseArtists").on('shown.bs.collapse', function(){
       $('#artistsLink').addClass('active-link')
       $('#artistsLink i').removeClass('fa-rotate-90')
+      $('body').addClass('overflow-none')
       
     });
     $("#collapseManifesto").on('shown.bs.collapse', function(){
       $('#manifestoLink').addClass('active-link')
+      $('body').addClass('overflow-none')
      
       
     });
     $("#collapseManifesto").on('shown.bs.collapse', function(){
       $('#manifestoLink2').addClass('active-link')
       $('#manifestoLink2 i').removeClass('fa-rotate-90')
+      $('body').addClass('overflow-none')
       
     });
 
   $("#collapseShows").on('hidden.bs.collapse', function(){
     $('#showsLink').removeClass('active-link')
     $('#showsLink i').addClass('fa-rotate-90')
+    $('body').removeClass('overflow-none')
   
   });
 
   $("#collapseArtists").on('hidden.bs.collapse', function(){
       $('#artistsLink').removeClass('active-link')
       $('#artistsLink i').addClass('fa-rotate-90')
+      $('body').removeClass('overflow-none')
     
     });
     $("#collapseManifesto").on('hidden.bs.collapse', function(){
       $('#manifestoLink').removeClass('active-link')
+      $('body').removeClass('overflow-none')
       
     
     });
     $("#collapseManifesto").on('hidden.bs.collapse', function(){
       $('#manifestoLink2').removeClass('active-link')
       $('#manifestoLink2 i').addClass('fa-rotate-90')
+      $('body').removeClass('overflow-none')
     
     });
 
@@ -103,16 +185,7 @@ $(document).ready(function(){
 
 
 
-
-$(document).ready(function(){
-
-var navOffsetGeneral = $('#general-header').height();
-$('.general-top').css('top',navOffsetGeneral);
-$('.carousel-nanoBar').css('top',navOffsetGeneral);
-$('.detach-hero').css('top',navOffsetGeneral * 2);
-
-
-});
+4
 
 /*
 
