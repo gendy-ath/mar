@@ -46,19 +46,19 @@ $(window).scroll(function(){
 
 var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
-    $('.carousel-nanoBar').css('top',navOffsetGeneralScroll);
     $('.js-post-header').css('top', '0px');
     $('#menu-bar-component').css('margin-top', '0px');
     $('.sticky-top-offset').css('top',navOffsetGeneralScroll);
     $('.general-top').css('top',navOffsetGeneralScroll);
+    $('.carousel-nanoBar').css('top',navOffsetGeneralScroll);
     
    
   } else {
-    $('.carousel-nanoBar').css('top',headerMainJs +17);
     $('.js-post-header').css('top', -headerMainJs);
     $('#menu-bar-component').css('margin-top', '-50px');
     $('.sticky-top-offset').css('top',navOffsetGeneralScroll);
     $('.general-top').css('top',navOffsetGeneralScroll);
+    $('.carousel-nanoBar').css('top',headerMainJs +17);
     
     
   }

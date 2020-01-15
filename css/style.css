@@ -769,6 +769,9 @@ margin-bottom: 30px;
     .mobile-logo{
         max-width: 100px;
     }
+    .detach-hero {
+        font-size: 1.25rem !important;
+    }
     }
 
 @media (max-width: 992px) { 
@@ -839,14 +842,3 @@ background-color: #000 !IMPORTANT;
 .micxloud-container {
  height: 60px;
 }
-
-.no-gutters {
-    margin-right: 0;
-    margin-left: 0;
-  
-    > .col,
-    > [class*="col-"] {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
